@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7D060D5-FC3C-4387-B8BF-13C0E07F3D83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Data</RootNamespace>
+    <AssemblyName>UCAS.Common.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeFirstStoreFunctions">
+      <HintPath>..\packages\CodeFirstStoreFunctions.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationUser.cs" />
+    <Compile Include="CommonDataModel\ApplicationLog.cs" />
+    <Compile Include="CommonDataModel\AspNetRole.cs" />
+    <Compile Include="CommonDataModel\AspNetRoleModule.cs" />
+    <Compile Include="CommonDataModel\AspNetSecurityModule.cs" />
+    <Compile Include="CommonDataModel\AspNetUser.cs" />
+    <Compile Include="CommonDataModel\AspNetUserClaim.cs" />
+    <Compile Include="CommonDataModel\AspNetUserLogin.cs" />
+    <Compile Include="CommonDataModel\AspNetUserRole.cs" />
+    <Compile Include="CommonDataModel\Bank.cs" />
+    <Compile Include="CommonDataModel\BankBranch.cs" />
+    <Compile Include="CommonDataModel\CommonDbContext.cs" />
+    <Compile Include="CommonDataModel\Country.cs" />
+    <Compile Include="CommonDataModel\Department.cs" />
+    <Compile Include="CommonDataModel\Designation.cs" />
+    <Compile Include="CommonDataModel\District.cs" />
+    <Compile Include="CommonDataModel\Division.cs" />
+    <Compile Include="CommonDataModel\EmailSMSType.cs" />
+    <Compile Include="CommonDataModel\Gender.cs" />
+    <Compile Include="CommonDataModel\GroupSetup.cs" />
+    <Compile Include="CommonDataModel\OfficeExecutive.cs" />
+    <Compile Include="CommonDataModel\Organization.cs" />
+    <Compile Include="CommonDataModel\Profession.cs" />
+    <Compile Include="CommonDataModel\ProjectInformation.cs" />
+    <Compile Include="CommonDataModel\ProjectParentInformation.cs" />
+    <Compile Include="CommonDataModel\Relation.cs" />
+    <Compile Include="CommonDataModel\ReportAccess.cs" />
+    <Compile Include="CommonDataModel\ReportInformation.cs" />
+    <Compile Include="CommonDataModel\Source.cs" />
+    <Compile Include="CommonDataModel\Team.cs" />
+    <Compile Include="CommonDataModel\Thana.cs" />
+    <Compile Include="CommonDataModel\UcasSoftwareProjects.cs" />
+    <Compile Include="CommonRepository\ApplicationLogRepository.cs" />
+    <Compile Include="CommonRepository\AspNetRoleModuleRepository.cs" />
+    <Compile Include="CommonRepository\AspNetRoleRepository.cs" />
+    <Compile Include="CommonRepository\AspNetSecurityModuleRepository.cs" />
+    <Compile Include="CommonRepository\BankBranchRepository.cs" />
+    <Compile Include="CommonRepository\BankRepository.cs" />
+    <Compile Include="CommonRepository\CountryRepositiry.cs" />
+    <Compile Include="CommonRepository\DepartmentRepository.cs" />
+    <Compile Include="CommonRepository\DesignationRepository.cs" />
+    <Compile Include="CommonRepository\DistrictRepository.cs" />
+    <Compile Include="CommonRepository\DivisionRepository.cs" />
+    <Compile Include="CommonRepository\EmailSMSTypeRepository.cs" />
+    <Compile Include="CommonRepository\GenderRepository.cs" />
+    <Compile Include="CommonRepository\GroupSetupRepository.cs" />
+    <Compile Include="CommonRepository\OfficeExecutiveRepository.cs" />
+    <Compile Include="CommonRepository\OrganizationRepository.cs" />
+    <Compile Include="CommonRepository\ProfessionRepository.cs" />
+    <Compile Include="CommonRepository\ProjectInformationRepository.cs" />
+    <Compile Include="CommonRepository\ProjectParentInformationRepository.cs" />
+    <Compile Include="CommonRepository\RelationRepository.cs" />
+    <Compile Include="CommonRepository\ReportAccessRepository.cs" />
+    <Compile Include="CommonRepository\ReportInformationRepository.cs" />
+    <Compile Include="CommonRepository\SecurityRepository.cs" />
+    <Compile Include="CommonRepository\SourceRepository.cs" />
+    <Compile Include="CommonRepository\TeamRepository.cs" />
+    <Compile Include="CommonRepository\ThanaRepository.cs" />
+    <Compile Include="CommonRepository\UcasSoftwareProjectsRepository.cs" />
+    <Compile Include="CommonRepository\UserRepository.cs" />
+    <Compile Include="Infrastructure\DatabaseFactoryCodeFirst.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDatabaseFactoryCodeFirst.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\RepositoryBaseCodeFirst.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserManagementEntities.cs" />
+    <Compile Include="ValidationResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasicDataAccess\BasicDataAccess.csproj">
+      <Project>{ded2e46a-6b05-4b17-ba10-3acb2cce8838}</Project>
+      <Name>BasicDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{8d48d966-8abd-453f-8792-4bcc3cdf0b7c}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
